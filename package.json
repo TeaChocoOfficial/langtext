@@ -1,0 +1,45 @@
+{
+    "name": "@teachocoofficial/langtext",
+    "version": "0.0.1",
+    "description": "javascript npm library create by teachoco-official",
+    "main": "dist/index.js",
+    "module": "dist/index.esm.js",
+    "types": "dist/index.d.ts",
+    "files": [
+        "dist"
+    ],
+    "publishConfig": {
+        "access": "public",
+        "registry": "https://registry.npmjs.org/"
+    },
+    "scripts": {
+        "test": "jest",
+        "build": "rollup -c",
+        "prepare": "npm run build",
+        "dev": "webpack --watch --config webpack.config.js",
+        "storybook": "start-storybook -p 6006",
+        "public": "npm publish --scope=@teachoco-official --access=public",
+        "publicforce": "npm publish --scope=@teachoco-official --access=public --force",
+        "installs": "pnpm install --save rollup rollup-plugin-peer-deps-external @rollup/plugin-commonjs @rollup/plugin-node-resolve @rollup/plugin-typescript recoil tslib typescript"
+    },
+    "author": "teachoco-official",
+    "license": "ISC",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/TeaChocoOfficial/langtext.git"
+    },
+    "dependencies": {
+        "@rollup/plugin-commonjs": "^28.0.2",
+        "@rollup/plugin-node-resolve": "^16.0.0",
+        "@rollup/plugin-typescript": "^12.1.2",
+        "recoil": "^0.7.7",
+        "rollup": "^4.29.1",
+        "rollup-plugin-peer-deps-external": "^2.2.4",
+        "tslib": "^2.8.1",
+        "typescript": "^5.7.2",
+        "webpack": "^5.97.1"
+    },
+    "devDependencies": {
+        "webpack-cli": "^6.0.1"
+    }
+}
